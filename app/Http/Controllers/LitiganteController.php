@@ -35,6 +35,30 @@ class CityController extends Controller
             return redirect()->back()->with('error', 'No se encontró el registro.');
 
                 }
+
+    //Método para modificar un registro ... 
+        public function modificarRegistro($id)
+            {
+                 $registro = TuModelo::find($id);
+                
+                    if ($registro) {
+                        // Aquí puedes modificar los atributos del registro según tus necesidades
+                        $registro->campo1 = 'Nuevo valor 1';
+                        $registro->campo2 = 'Nuevo valor 2';
+                        // ...
+                
+                        $registro->save();
+                
+                        return redirect()->back()->with('success', 'El registro se ha modificado correctamente.');
+                    } else {
+                        return redirect()->back()->with('error', 'No se encontró el registro.');
+                    }
+                }
+                
+    //Para registrar un usuario
+       
+
+
     }
 
 
