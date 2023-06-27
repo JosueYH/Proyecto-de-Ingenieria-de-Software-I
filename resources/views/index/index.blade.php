@@ -1,5 +1,4 @@
-@extends('template.layout')
-@extends('Litigante.mostrartodos')
 
+@extends('template.layout')
 
 

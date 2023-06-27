@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+//Importamos nuestro controlador
+use App\Http\Controllers\IndexController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [IndexController::class, 'actionIndex']);
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
