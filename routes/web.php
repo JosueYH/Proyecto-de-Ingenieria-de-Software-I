@@ -18,15 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Para mostrar Registros de la Tabla Litigante
-//Route::get('/mostrar-registros', 'TuControlador@mostrarRegistros')->name('mostrar.registros');
-Route::get('/mostrar-registros', 'Tlitigante')->name('mostrar.registros');
-
-//Para eliminar un registro
-Route::get('/eliminar/{litigante_id}', 'TLitigante')->name('eliminar.registro');
-
-//Route::get('city/getall', [CityController::class, 'actionGetAll']);
-//Route::match(['get', 'post'], 'city/insert', [CityController::class, 'actionInsert']);
-
-
 
