@@ -18,10 +18,10 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class, 'actionIndex']);
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
 
 
