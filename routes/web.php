@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 //Importamos nuestro controlador
 use App\Http\Controllers\IndexController;
 
+//controlador para mostrar registros de Litigantes
+use App\Http\Controllers\LitiganteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,12 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class, 'actionIndex']);
+
+//Route::get('/mostrar-registros', 'NombreControlador@mostrarRegistros');
+
+Route::get('litigante/mostrarlitigantes', [LitiganteController::class, 'actionGetAll']);
+//Route::get('litigante/mostrar', [LitiganteController::class, 'mostrarRegistros']);
+
 /*
 Route::get('/', function () {
     return view('welcome');
