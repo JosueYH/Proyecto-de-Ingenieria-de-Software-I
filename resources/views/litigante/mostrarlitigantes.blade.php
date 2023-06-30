@@ -16,7 +16,6 @@
     <tbody>
         <!--@foreach($listLitigante as $value)-->
         @foreach($listLitigante as $value)
-
 			<tr>
 				<td>{{$value->conciliador_id}}</td>
                 <td>{{$value->nombre_conciliador}}</td>

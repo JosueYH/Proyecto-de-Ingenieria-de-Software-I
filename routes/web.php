@@ -32,4 +32,3 @@ Route::get('/', function () {
 });
 */
 
-

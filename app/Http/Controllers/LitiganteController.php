@@ -2,11 +2,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TLitiganteModel;   //Importamos el modelo Litigante creado
+use App\Models\Entidades\TLitiganteModel;   //Importamos el modelo
 
 class LitiganteController extends Controller
 {
-
     public function actionGetAll()
 	{
 		$listLitigante = TLitiganteModel::all();
@@ -16,17 +15,5 @@ class LitiganteController extends Controller
 			'listLitigante' => $listLitigante
 		]);
     }
-
-/*
-    public function mostrarRegistros()
-    {
-        $registros = TLitiganteModel::all();
-        return view('litigante/mostrarlitigantes', compact('registros'));
-
-        //$registros = NombreModelo::all(); // Recupera todos los registros de la tabla
-        //return view('nombre_vista', compact('registros'));
-    }
-*/
-
 }
 
