@@ -9,17 +9,16 @@
 		<tr>
 			<th>Identificador</th>
             <th>Nombre</th>
-            <th>Especialidad</th>
+            <th>Direccion</th>
             <!-- Agrega aquí más columnas si es necesario -->
 		</tr>
 	</thead>
     <tbody>
-        <!--@foreach($listLitigante as $value)-->
         @foreach($listLitigante as $value)
 			<tr>
-				<td>{{$value->conciliador_id}}</td>
-                <td>{{$value->nombre_conciliador}}</td>
-                <td>{{$value->especialidad}}</td>
+				<td>{{$value->litigante_id}}</td>
+                <td>{{$value->nombre_parte}}</td>
+                <td>{{$value->direccion}}</td>
                 <!-- Agrega aquí las celdas adicionales correspondientes a cada columna -->
 			</tr>
 		@endforeach
