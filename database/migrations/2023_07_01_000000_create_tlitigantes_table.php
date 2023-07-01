@@ -4,22 +4,18 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+return CreateTLitigantesTable class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+    /*** Run the migrations ***/
     public function up(): void
     {
         Schema::create('tlitigantes', function (Blueprint $table) {
-            $table->litigante_id();
+            $table->id('litigante_id');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+    /*** Reverse the migrations ***/
     public function down(): void
     {
         Schema::dropIfExists('tlitigantes');
