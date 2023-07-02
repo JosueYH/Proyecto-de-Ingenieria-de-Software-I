@@ -23,8 +23,10 @@ Route::get('/', [IndexController::class, 'actionIndex']);
 
 //Route::get('/mostrar-registros', 'NombreControlador@mostrarRegistros');
 
-Route::get('litigante/mostrarlitigantes', [LitiganteController::class, 'actionGetAll']);
+Route::get('litigante/mostrar', [LitiganteController::class, 'actionGetAll']);
 //Route::get('litigante/mostrar', [LitiganteController::class, 'mostrarRegistros']);
+
+Route::match(['get', 'post'], 'litigante/insertar', [LitiganteController::class, 'actionInsert']);
 
 /*
 Route::get('/', function () {
