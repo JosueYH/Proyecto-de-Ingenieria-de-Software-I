@@ -18,7 +18,7 @@ class LitiganteController extends Controller
 			'listLitigante' => $listLitigante
         ]);
 
-        //return view('litigante.mostrarlitigantes', ['listLitigante' => $listLitigante]); //Otra forma  de retornar
+        //return view('litigante.mostrar', ['listLitigante' => $listLitigante]); //Otra forma  de retornar
     }
 
     //Método  Insertar Reistro:
