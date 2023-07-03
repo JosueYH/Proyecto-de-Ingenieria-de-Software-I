@@ -1,77 +1,76 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Register-Conciliador</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+	<link rel="stylesheet" href="{{asset('plugins/iniciosesion/css/style.css')}}">
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+	</head>
+	<body class="img js-fullheight" style="background-image: url({{asset('plugins/iniciosesion/images/bg.jpg')}})">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+                    <!--h2 class="heading-section">Login #10</h2-->
+                    <h2 class="heading-section"></h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-14">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Bienvenido al área de Registro de Usuarios!</h3>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                <form action="#" class="signin-form">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Nombre de Usuario" required>
+                    </div>
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+	            	<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Especialidad" required>
+                    </div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Teléfono" required>
+                    </div>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                	<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Email" required>
+                    </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+	            <div class="form-group">
+	              <input id="password-field" type="password" class="form-control" placeholder="Contraseña" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+
+                <div class="form-group">
+	            	<button type="submit" class="form-control btn btn-primary submit px-3">REGISTRAR</button>
+                </div>
+
+            	<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Ya tienes una Cuenta? <a href="#" class="ml-2">Iniciar Sesión</a>
+					</div>
+                </div>
+
+              </form>
+
+			</div>
+			</div>
+		</div>
+	</section>
+
+  <script src="{{asset('plugins/iniciosesion/js/jquery.min.js')}}"></script>
+  <script src="{{asset('plugins/iniciosesion/js/popper.js')}}"></script>
+  <script src="{{asset('plugins/iniciosesion/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('plugins/iniciosesion/js/main.js')}}"></script>
+
+	</body>
+</html>
+
+
