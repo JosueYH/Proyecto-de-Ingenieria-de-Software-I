@@ -26,9 +26,11 @@
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Ingrese con sus Credenciales</h3>
 
-                <form action="#" class="signin-form">
+                <!--<form action="#" class="signin-form">-->
+                <form action="{{route('login')}}" method="post" class="signin-form">
+                    @csrf  <!--Token de formulario-->
 		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Nombre de Usuario" required>
+		      			<input type="text" class="form-control" placeholder="Email" required>
 		      		</div>
 	            <div class="form-group">
 	              <input id="password-field" type="password" class="form-control" placeholder="Contraseña" required>
@@ -50,7 +52,9 @@
 
             	<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						No tienes una Cuenta? <a href="#" class="ml-2">Registrarse</a>
+                        <!--No tienes una Cuenta? <a href="#" class="ml-2">Registrarse</a>-->
+						No tienes una Cuenta? <a href="{{route('register')}}" class="ml-2">Registrarse</a>
+
 					</div>
                 </div>
 

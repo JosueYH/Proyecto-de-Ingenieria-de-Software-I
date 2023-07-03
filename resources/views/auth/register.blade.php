@@ -26,9 +26,11 @@
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Bienvenido al área de Registro de Usuarios!</h3>
 
-                <form action="#" class="signin-form">
+                <!--form action="#" class="signin-form"-->
+                <form action="{{route('register')}}" method="post" class="signin-form">
+                    @csrf <!--token para los formularios (linea agregado-->
 		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Nombre de Usuario" required>
+		      			<input type="text" class="form-control" placeholder="Nombre y Apellidos" required>
                     </div>
 
 	            	<div class="form-group">
@@ -54,7 +56,8 @@
 
             	<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Ya tienes una Cuenta? <a href="#" class="ml-2">Iniciar Sesión</a>
+                        <!--Ya tienes una Cuenta? <a href="#" class="ml-2">Iniciar Sesión</a> -->
+                        Ya tienes una Cuenta? <a href="{{route('login')}}" class="ml-2">Iniciar Sesión</a>
 					</div>
                 </div>
 

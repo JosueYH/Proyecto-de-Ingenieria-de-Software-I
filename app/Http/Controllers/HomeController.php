@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //return view('home');
+        return view('index/index'); //Al dar click en el botón Iniciar Sesión se lance el Template de AdminLTE
     }
 }
