@@ -513,7 +513,7 @@
                   <p>Compose</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item"> <!--En esta parte se había modificado ...revisar-->
                 <a href="pages/mailbox/read-mail.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Read</p>
@@ -850,7 +850,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Pantalla Principal</h1>
+
+<!------------------------------------------------------------------------------->
+            <!--<h1 class="m-0">Pantalla Principal</h1>-->
+            <h1 class="m-0">@yield('titleGeneral')</h1> <!--Línea agregada para los action Controller-->
+
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -873,6 +877,10 @@
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>150</h3>
+
+					<div class="col-md-12 pt-3 pb-3">
+						@yield('sectionGeneral') <!--Otra Línea agregada-->
+					    </div>
 
                 <p>Es un ejemplito</p>
               </div>

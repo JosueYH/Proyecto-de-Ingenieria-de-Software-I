@@ -11,7 +11,7 @@ class LitiganteController extends Controller
     {
 		$listLitigante = TLitiganteModel::all();
 
-        //dd($listLitigante);  //Para Depurar (Luego, borrar esta linea)
+        dd($listLitigante);  //Para Depurar (Luego, borrar esta linea)
 
         return view('litigante/mostrar',
 		[
