@@ -2,7 +2,7 @@
 
 @extends('template.layout')
 @section('titleGeneral', 'Lista de Litigantes ...')
-@section('sectionGeneral')
+@section('sectionMostrar')
 
 <table class="table table-striped">
 	<thead>
@@ -16,7 +16,7 @@
 		</tr>
 	</thead>
     <tbody>
-        <?php dd($listLitigante); ?> <!-- (Para verificar los datos) Depurara o inspeccionar-->
+        <!--?php dd($listLitigante); ?--> <!-- (Para verificar los datos) Depurara o inspeccionar-->
         @foreach($listLitigante as $value)
 			<tr>
 				<td>{{$value->litigante_id}}</td>

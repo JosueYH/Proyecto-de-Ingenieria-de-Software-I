@@ -880,7 +880,12 @@
 
 					<div class="col-md-12 pt-3 pb-3">
 						@yield('sectionGeneral') <!--Otra Línea agregada-->
-					    </div>
+					</div>
+
+                    <div class="col-md-12 pt-3 pb-3">
+						@yield('sectionMostrar') <!--Otra Línea agregada-->
+					</div>
+
 
                 <p>Es un ejemplito</p>
               </div>

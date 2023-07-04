@@ -11,7 +11,7 @@ class LitiganteController extends Controller
     {
 		$listLitigante = TLitiganteModel::all();
 
-        dd($listLitigante);  //Para Depurar (Luego, borrar esta linea)
+        //dd($listLitigante);  //Para Depurar (Luego, borrar esta linea)
 
         return view('litigante/mostrar',
 		[
@@ -29,8 +29,11 @@ class LitiganteController extends Controller
 			$tLitigante = new TLitiganteModel();
 
 			$tLitigante->litigante_id = uniqid();
-			$tLitigante->name = $request->input('txtName');
-
+            //$tLitigante->name = $request->input('txtName');
+            $tLitigante->nombre_parte = $request->input('txtname');
+            $tLitigante->direccion = $requests->input('txtaddress');
+            $tLitigante->telefono = $requests->input('txtphone');
+            $tLitigante->email = $requests->input('txtemail');
 			$tLitigante->save();
 
 			return redirect('litigante/insertar');
