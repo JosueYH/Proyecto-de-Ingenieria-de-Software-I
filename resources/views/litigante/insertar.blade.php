@@ -1,6 +1,6 @@
 @extends('template.layout')
 @section('titleGeneral', 'Registrar Litigantes...')
-@section('sectionGeneral')
+@section('sectionInsertar')
 
 <form id="frmLitiganteInsert" action="{{url('litigante/insertar')}}" method="post">
 	<div class="row">

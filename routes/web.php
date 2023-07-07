@@ -19,6 +19,12 @@ use App\Http\Controllers\LitiganteController;
 |
 */
 
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+
 Route::get('/', [IndexController::class, 'actionIndex']);
 
 //Route::get('/mostrar-registros', 'NombreControlador@mostrarRegistros');
@@ -28,13 +34,13 @@ Route::get('litigante/mostrar', [LitiganteController::class, 'actionGetAll']);
 
 Route::match(['get', 'post'], 'litigante/insertar', [LitiganteController::class, 'actionInsert']);
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+Route::get('registros/{id}/edit', 'RegistroController@edit')->name('registros.edit');
+Route::put('registros/{id}', 'RegistroController@update')->name('registros.update');
 
+Route::delete('registros/{id}', 'RegistroController@destroy')->name('registros.destroy');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
