@@ -67,12 +67,12 @@
 			</div>
 		</div>
 	</section>
-
+<!--
   <script src="{{asset('plugins/iniciosesion/js/jquery.min.js')}}"></script>
   <script src="{{asset('plugins/iniciosesion/js/popper.js')}}"></script>
   <script src="{{asset('plugins/iniciosesion/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('plugins/iniciosesion/js/main.js')}}"></script>
-
+-->
 	</body>
 </html>
 

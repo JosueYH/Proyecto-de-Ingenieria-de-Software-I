@@ -42,10 +42,11 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <!--<a href="index3.html" class="nav-link">Home</a>-->
+        <a href="{{url('/')}}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">Contactos</a>
       </li>
     </ul>
 
@@ -214,30 +215,31 @@
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Paneles
+                Datos
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="{{url('litigante/insertar')}}" class="nav-link {{ Request::is('litigante/insertar') ? 'active' : '' }} ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Panel 1</p>
+                  <p>Administrador</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{{url('/litigante/mostrar')}}" class="nav-link {{ Request::is('litigante/mostrar') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pael 2</p>
+                  <p>Gestionar Litigantes</p>
                 </a>
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Solicitudes
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
@@ -738,7 +740,7 @@
           <!--@yield('titleGeneral')--> <!--Cualquiera de los dos-->
 
 <!------------------------------------------------------------------------------->
-          <h1 class="m-0">@yield('titleGeneral')</h1>  <!--Línea agregada para los Tíulos-->
+          <h1 class="m-0">@yield('titleGeneral')</h1>  <!--Línea agregada para los Títulos-->
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -751,41 +753,44 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-10 col-6">
-            <!-- small box -->
-          <!--  <div class="small-box bg-info"> -->
-              <div class="inner">
-                <!--<h3>150</h3> -->
-
-					<div class="col-md-12 pt-3 pb-3">
-					@yield('sectionInsertar') <!--Insetar Otra Línea agregada-->
-					</div>
-
-                    <div class="col-md-12 pt-3 pb-3">
-						@yield('sectionMostrar') <!--Otra Línea agregada-->
-					</div>
-
-               <!-- <p>Es un ejemplito</p> -->
-              </div>
-              <!--<div class="icon"> -->
-               <!-- <i class="ion ion-pie-graph"></i> -->
-           </div>
-            <!--  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-lg-10 col-6">
+        <!-- small box -->
+        <!--<div class="small-box bg-info">
+          <div class="inner">
+            <h3>150</h3>
           </div>
-          <!-- ./col -->
+        </div>-->
+
+        <div class="col-md-12 pt-3 pb-3">
+          @yield('sectionIndex') <!--Insertar Otra Línea agregada-->
         </div>
-        <!-- /.row -->
-        <!-- Main row -->
-        <div class="row">
-          <!-- Left col -->
-          <section class="col-lg-7 connectedSortable">
-            <!-- Custom tabs (Charts with tabs)-->
+
+        <div class="col-md-12 pt-3 pb-3">
+          @yield('sectionInsertar') <!--Insertar Otra Línea agregada-->
+        </div>
+
+        <div class="col-md-12 pt-3 pb-3">
+          @yield('sectionMostrar') <!--Otra Línea agregada-->
+        </div>
+
+        <!--<p>Es un ejemplito</p>-->
+        <!--<div class="icon">
+          <i class="ion ion-pie-graph"></i>
+        </div>-->
+        <!--<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>-->
+      </div>
+    </div>
+    <!-- /.row -->
+    <!--<Main row>
+      <div class="row">-->
+    <!-- Left col -->
+    <section class="col-lg-7 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
 
 
   <!-- Control Sidebar -->
